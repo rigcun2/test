@@ -12,4 +12,5 @@ os.system('cls' if os.name == 'nt' else 'clear')
 console.print('''взломщик тестов
 ''')
 with requests.session() as s:
+    r=s.get('https://naurok.ua/test/join')
     p=s.post('https://naurok.ua/test/join', data=payload)
