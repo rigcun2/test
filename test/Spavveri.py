@@ -18,6 +18,6 @@ for i in range(999):
     headers = {"UserAgent": fake_useragent.UserAgent().random}
     try:
         requests.post("https://naurok.ua/student/tests", data={"phone": kod}, headers=headers, proxies=proxies)
-            print('мае')
+        print('мае')
     except:
         print('немае')
