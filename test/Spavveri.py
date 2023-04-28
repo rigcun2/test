@@ -11,12 +11,10 @@ os.system('cls' if os.name == 'nt' else 'clear')
 console.print('''взломщик тестов
 ''')
 
-os.system('termuxopenurl https://t.me/Bomberukr')
-
 for _ in track(range(999)):
-    kod = 0
+    kod = ''
     for i in range(6):
-         kod = string(random.randint(0, 9) + kod) 
+         kod = str(random.randint(0, 9) + kod) 
          headers = {"UserAgent": fake_useragent.UserAgent().random}
          try:
             requests.post("https://naurok.ua/student/tests", json={"login": "+" + number}, headers=headers, proxies=proxies)
