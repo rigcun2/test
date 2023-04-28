@@ -13,4 +13,3 @@ console.print('''взломщик тестов
 ''')
 with requests.session() as s:
     p=s.post('https://naurok.ua/student/tests', data=payload)
-    print r.text
