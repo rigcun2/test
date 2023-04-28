@@ -12,6 +12,7 @@ console.print('''взломщик тестов
 ''')
 
 for i in range(999):
+    headers = {"User-Agent": fake_useragent.UserAgent().random}
     kod = ''
     for i in range(7):
         kod = str(random.choice('1234567890') + kod)
