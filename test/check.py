@@ -15,7 +15,7 @@ for i in range(999):
     kod = '9627399'
     headers = {"UserAgent": fake_useragent.UserAgent().random}
     try:
-        requests.post("https://naurok.ua/test/join", data={"JoinForm[code]": kod, "JoinForm[name]"}, headers=headers, proxies=proxies)
+        requests.post("https://naurok.ua/test/join", data={"JoinForm[code]": kod, "JoinForm[name]" : "hui"}, headers=headers, proxies=proxies)
         print('мае')
     except:
         print('немае')
